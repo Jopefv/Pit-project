@@ -5,14 +5,15 @@ export const homeObjOne = {
   lighttextDesc: true,
   topLine: 'Premium Bank',
   headline: 'Unlimited Transactions with zero fees',
-  description: 'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
+  description:
+    'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
   buttonLabel: 'Get started',
   imgStart: false,
-  img: '../../images/svg-5.svg',
+  img: '../../images/svg5.svg',
   alt: 'car',
   dark: true,
   primary: true,
-  darkText: false
+  darkText: false,
 };
 
 export const homeObjTwo = {
@@ -22,14 +23,15 @@ export const homeObjTwo = {
   lighttextDesc: false,
   topLine: 'Unlimited Access',
   headline: 'Login to your account at any time',
-  description: 'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
+  description:
+    'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
   buttonLabel: 'Learn More',
   imgStart: true,
-  img: '../../images/svg-4.svg',
+  img: '../../images/svg4.svg',
   alt: 'Piggybanck',
   dark: false,
   primary: false,
-  darkText: true
+  darkText: true,
 };
 
 export const homeObjThree = {
@@ -39,11 +41,12 @@ export const homeObjThree = {
   lighttextDesc: false,
   topLine: 'Premium Bank',
   headline: 'Creating an account is extremely easy',
-  description: 'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
+  description:
+    'Get access to our exclusive app that allows you to send unlimited transactions whitout getting charged any fees.',
   buttonLabel: 'Start Now',
   imgStart: false,
-  img: '../../images/svg-3.svg',
+  img: '../../images/svg3.svg',
   alt: 'car',
   primary: false,
-  darkText: true
+  darkText: true,
 };
