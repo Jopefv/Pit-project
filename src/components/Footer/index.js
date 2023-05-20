@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { FooterContainer, FooterWrap, FooterLinkWrapper, FooterLinkItems, FooterLinkContainer, FooterLinkTitle, FooterLink, SocialIconLink, SocialIcons, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights } from './FooterElements'
+import { FooterContainer, FooterWrap, FooterLinkWrapper, FooterLinkItems, FooterLinkContainer, FooterLinkTitle, FooterLink, SocialIconLink, SocialIcons, SocialLogo, SocialMedia, SocialMediaWrap, WebsiteRights, Img } from './FooterElements'
 import { animateScroll as scroll } from 'react-scroll';
+import logo from './../../images/logo.png';
 
 const Footer = () => {
   const toggleHome = () => {
@@ -49,10 +50,11 @@ const Footer = () => {
         </FooterLinkContainer>
         <SocialMedia>
           <SocialMediaWrap>
+          <Img src={logo} alt="Imagem" className="image" to='/' onClick={toggleHome}/>
             <SocialLogo to='/' onClick={toggleHome}>
-              dolla
+              Estagio360
             </SocialLogo>
-            <WebsiteRights>dolla © {new Date().getFullYear()} All rights reserved.</WebsiteRights>
+            <WebsiteRights>Estagio360 © {new Date().getFullYear()} Todos os direitos reservados.</WebsiteRights>
             <SocialIcons>
               <SocialIconLink href='/' target='_blank' arial-label='Facebook'>
                 <FaFacebook />

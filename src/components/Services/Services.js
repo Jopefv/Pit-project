@@ -11,18 +11,18 @@ const Services = () => {
       <ServicesWrapper>
         <ServicesCard>
           <ServicesIcon src={Icon1}/>
-          <ServicesH2>Reduce expenses</ServicesH2>
-          <ServicesP>We help your fess and increase your overall revenue.</ServicesP>
+          <ServicesH2>Locais de oferta </ServicesH2>
+          <ServicesP>Aqui você poderá acessar e visualizar diversas ofertas disponíveis perto de sua casa, na sua região e em por todo o país.</ServicesP>
         </ServicesCard>
         <ServicesCard>
         <ServicesIcon src={Icon2}/>
-          <ServicesH2>Virtual Offices</ServicesH2>
-          <ServicesP>you can acess our plataform online anywhere in the world.</ServicesP>
+          <ServicesH2>Entrevistas e dúvidas</ServicesH2>
+          <ServicesP>Consulte sua empresa e agende entrevistas com os candidatos a suas vagas de forma eficiente.</ServicesP>
         </ServicesCard>
-        <ServicesCard>
+        <ServicesCard >
           <ServicesIcon src={Icon3}/>
-          <ServicesH2>Reduce expenses</ServicesH2>
-          <ServicesP>Unlock our special membership card that returns 5% cash back.</ServicesP>
+          <ServicesH2>Facilidade de Busca</ServicesH2>
+          <ServicesP> Nosso projeto disponibiliza uma busca voltada a filtragem, no qual lhe auxiliará na busca pelo seu estágio de forma adaptada e congruente.</ServicesP>
         </ServicesCard>
       </ServicesWrapper>
     </ServicesContainer>

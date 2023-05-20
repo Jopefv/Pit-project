@@ -44,11 +44,12 @@ export const FormContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Adicione essa linha para centralizar horizontalmente */
 
   @media screen and (max-width: 480px) {
     padding: 10px;
   }
-`
+`;
 export const Form = styled.form`
   background-color: #010101;
   max-width: 400px;
@@ -103,3 +104,14 @@ margin-top: 24px;
 color: #fff;
 font-size: 14px;
 `
+
+export const ImgContainer = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Img = styled.img`
+  width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+`;

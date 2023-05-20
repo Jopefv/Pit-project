@@ -103,3 +103,11 @@ export const SocialIconLink = styled.a`
   color: #fff;
   font-size: 24px;
 `
+
+export const Img = styled.img`
+display: flex;
+align-items: center;
+  width: 100px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  margin-right: -90px; /* Espaçamento entre a imagem e o texto */
+`

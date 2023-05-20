@@ -35,7 +35,6 @@ export const NavLogo = styled(LinkR) `
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `
@@ -106,4 +105,12 @@ export const NavBtnLink = styled(LinkR)`
     background: #fff;
     color: #010606;
   }
+`
+
+export const Img = styled.img`
+display: flex;
+align-items: center;
+  width: 90px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto;
+  margin-right: -100px; /* Espaçamento entre a imagem e o texto */
 `
