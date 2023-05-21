@@ -7,7 +7,6 @@ const SigninPage = () => {
     <>
     
       <Signin/>
-      
     </>
   )
 }
