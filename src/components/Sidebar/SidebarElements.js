@@ -83,3 +83,21 @@ export const SidebarRoute = styled(LinkR)`
     color: #010606;
   }
 `
+
+export const SidebarRoutePage = styled(LinkR)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 02s ease-in-out;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    color: #edac5a;
+    transition: 0.1s ease-in-out;
+  }
+`

@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const homeObjOne = {
   id: 'about',
   lightBg: false,
@@ -43,7 +45,7 @@ export const homeObjThree = {
   headline: 'Cadastre A Sua Empresa',
   description:
     'Esta procurando um funcionario? Cadastre aqui a sua empresa e receba oportunidades que podem alavancar seu comercio.',
-  buttonLabel: 'Start Now',
+  buttonLabel: <Link to="/signup">Cadastre-se</Link>,
   imgStart: false,
   img: require('../../images/svg3.svg').default,
   alt: 'car',

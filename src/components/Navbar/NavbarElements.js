@@ -114,3 +114,26 @@ align-items: center;
   height: auto;
   margin-right: -100px; /* Espaçamento entre a imagem e o texto */
 `
+
+export const NavBtnLinkRoute = styled(LinkR)`
+  border-radius: 50px;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: White;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #edac5a;
+    color: #000;
+  }
+
+  &.active {
+    border-bottom: 3px solid #edac5a
+  }
+`

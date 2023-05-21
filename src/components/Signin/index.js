@@ -8,9 +8,10 @@ import {
   FormH1,
   FormLabel,
   FormButton,
-  Text,
   Img,
-  ImgContainer
+  ImgContainer,
+  Register,
+  A
 } from './SigninElements';
 import logo from './../../images/logo.png';
 
@@ -31,7 +32,13 @@ const SignIn = () => {
               <FormLabel htmlFor="for">Senha</FormLabel>
               <FormInput htmlFor="password" required />
               <FormButton type="submit">Continue</FormButton>
-              <Text>Forgot password</Text>
+              <Register>
+              Nao Possui Conta?
+              <A to="/signup">Cadastre-se</A>
+            </Register>
+            <Register>
+             Esqueceu sua senha?
+            </Register>
             </Form>
           </FormContent>
         </FormWrap>

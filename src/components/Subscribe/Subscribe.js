@@ -31,7 +31,7 @@ function Pricing() {
                    
                     </PricingContainerFeaturesItem>
                 </PricingContainerFeatures>
-                <Button to='./signup'>
+                <Button to='./signupcliente'>
                   Cadastrar
                 </Button >
               </PricingContainerCardInfo>
@@ -54,7 +54,7 @@ function Pricing() {
                    
                     </PricingContainerFeaturesItem>
                 </PricingContainerFeatures>
-                <Button to='/signup'>
+                <Button to='/signupempresa'>
                   Cadastrar
                 </Button >
               </PricingContainerCardInfo>

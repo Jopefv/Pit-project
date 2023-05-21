@@ -111,3 +111,19 @@ export const Img = styled.img`
   width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
   height: auto;
 `;
+
+export const Register = styled.div`
+  font-size: 14px;
+  text-decoration: none;
+  color: rgb(139, 139, 139);
+  margin: auto;
+  width: 60%;
+  text-align: center;
+  padding: 12px;
+`;
+
+export const A = styled(Link)`
+margin: auto;
+color: #fff;
+text-decoration-line: underline;
+`;
