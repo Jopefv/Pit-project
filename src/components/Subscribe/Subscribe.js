@@ -1,6 +1,6 @@
 import React from 'react';
 import './SubscribeElements.js';
-import { FaFire } from 'react-icons/fa';
+import { MdBoy } from 'react-icons/md';
 import { FaBriefcase } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 import { PricingContainer, PricingContainerCard, PricingContainerCardInfo, PricingContainerFeatures, PricingContainerFeaturesItem, PricingHeading, PricingSection, PricingWrapper, Icon, Button} from './SubscribeElements.js';
@@ -17,7 +17,7 @@ function Pricing() {
             <PricingContainerCard to='/sign-up'>
               <PricingContainerCardInfo>
                 <Icon>
-                  <FaFire />
+                  <MdBoy />
                 </Icon>
                 <PricingContainerFeatures>Cadastro Pessoal</PricingContainerFeatures>
                 <PricingContainerFeatures>
