@@ -6,7 +6,9 @@ import { IconContext } from 'react-icons/lib';
 import { PricingContainer, PricingContainerCard, PricingContainerCardInfo, PricingContainerFeatures, PricingContainerFeaturesItem, PricingHeading, PricingSection, PricingWrapper, Icon, Button} from './SubscribeElements.js';
 
 
+
 function Pricing() {
+  
   return (
     <IconContext.Provider value={{ color: '#fff', size: 64 }}>
       <PricingSection>

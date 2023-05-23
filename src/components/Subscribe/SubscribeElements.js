@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom'
+import { Link as LinkR } from 'react-router-dom';
 
 export const PricingSection = styled.div`
   height: 100%;
@@ -8,20 +8,28 @@ export const PricingSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%,  #ff884a 100%);
+  background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%, #ff884a 100%);
+`;
+
+export const PricingContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 960px) {
+    align-items: center;
+  }
 `;
 
 export const PricingContainerCard = styled.a`
-  background: linear-gradient(45deg, #000 0%, #000 25%, #ff4838 50%,  #ff884a 100%);
+  background: linear-gradient(45deg, #000 0%, #000 25%, #ff4838 50%, #ff884a 100%);
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7);
   width: 280px;
   height: 500px;
   text-decoration: none;
   border-radius: 4px;
-
-  &:nth-child(2) {
-    background: linear-gradient(-45deg, #000 0%, #000 25%, #ff4838 50%,  #ff884a 100%);
-  }
+  margin: 0 24px;
 
   &:hover {
     transform: scale(1.06);
@@ -29,15 +37,10 @@ export const PricingContainerCard = styled.a`
     color: #1c2237;
   }
 
-  &:nth-child(2) {
-    margin: 0 24px;
+  @media screen and (max-width: 960px) {
+    width: 90%;
+    margin: 24px;
   }
-`;
-
-export const PricingContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 export const PricingWrapper = styled.div`
@@ -76,7 +79,7 @@ export const PricingContainerCardInfo = styled.div`
 `;
 
 export const PricingContainerFeatures = styled.ul`
-font-size: 20px;
+  font-size: 20px;
   margin: 16px 0 32px;
   list-style: none;
 `;
@@ -99,21 +102,10 @@ export const ResponsiveContainer = styled.div`
       width: 100%;
     }
 
-    ${PricingContainerCard} {
-      width: 90%;
-    }
-
-    ${PricingWrapper} {
-      margin: 0 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     ${PricingContainerCard}:nth-child(2) {
       transform: scale(1);
       background: #242424;
-      margin: 24px;
+      margin: 24px auto;
     }
 
     ${PricingContainerCard}:hover {
@@ -134,9 +126,8 @@ export const Button = styled(LinkR)`
   cursor: pointer;
 
   &:hover {
-    background:#fff;
+    background: #fff;
     color: #000;
     transition: 0.3s ease-in-out;
   }
-`
-
+`;
