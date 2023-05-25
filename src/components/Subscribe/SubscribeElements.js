@@ -2,12 +2,13 @@ import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
 export const PricingSection = styled.div`
-  height: 100%;
+  height: 90.9vh; /* Alterado de 100% para 100vh */
   width: 100%;
   padding: 100px 0 160px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center; /* Adicionado alinhamento central */
   background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%, #ff884a 100%);
 `;
 
