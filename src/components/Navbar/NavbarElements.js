@@ -39,7 +39,9 @@ export const NavLogo = styled(LinkR)`
   text-decoration: none;
 
   @media screen and (max-width: 768px) {
-    margin-left: -10px; /* Ajuste o espaçamento entre o logo e o ícone do menu mobile */
+    margin-left: -10px;
+    align-self: center;
+    margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
   }
 `;
 export const MobileIcon = styled.div`
@@ -112,11 +114,9 @@ export const NavBtnLink = styled(LinkR)`
 `
 
 export const Img = styled.img`
-  display: flex;
-  align-items: center;
-  width: 90px; /* Ajuste o tamanho da imagem conforme necessário */
+  width: 30px; /* Ajuste o tamanho da imagem conforme necessário */
   height: auto;
-  margin-right: 10px; /* Ajuste o espaçamento entre a imagem e o texto */
+  margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
 `;
 
 export const NavBtnLinkRoute = styled(LinkR)`
