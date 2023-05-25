@@ -39,7 +39,7 @@ export const NavLogo = styled(LinkR)`
   text-decoration: none;
 
   @media screen and (max-width: 768px) {
-    margin-left: 10px; /* Ajuste o espaçamento entre o logo e o ícone do menu mobile */
+    margin-left: -10px; /* Ajuste o espaçamento entre o logo e o ícone do menu mobile */
   }
 `;
 export const MobileIcon = styled.div`
