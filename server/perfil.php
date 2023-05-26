@@ -1,3 +1,4 @@
+
 <?php
 // Recupere os dados do usuário do banco de dados ou de qualquer outra fonte
 

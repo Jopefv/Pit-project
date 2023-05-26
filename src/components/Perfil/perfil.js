@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {Container, ContainerDiv, ContainerH1, ContainerH2, ContainerP} from './perfilElements'
+import { Container, ContainerResponseH1, ContainerResponseH2, ContainerResponseP } from "./perfilElements";
 
 const Perfil = () => {
   const [dadosUsuario, setDadosUsuario] = useState(null);
 
   useEffect(() => {
     // Faz a requisição para obter os dados do usuário
-    axios.get('/../BackEnd/perfil.php?tipoCadastro=cliente' || '/../BackEnd/perfil.php?tipoCadastro=empresa' ) // ou tipoCadastro=empresa, dependendo do caso
+    axios.get('server/perfil.php?tipoCadastro=cliente' || 'server/perfil.php?tipoCadastro=empresa' ) // ou tipoCadastro=empresa, dependendo do caso
       .then((response) => {
         // Manipula a resposta do servidor
         const { data } = response;
@@ -22,16 +22,16 @@ const Perfil = () => {
   return (
     <Container>
       {dadosUsuario ? (
-        <ContainerH1>
+        <ContainerResponseH1>
           {/* Exiba os dados do usuário */}
-          <ContainerH2>{dadosUsuario.nomeCliente || dadosUsuario.nomeEmpresa}</ContainerH2>
+          <ContainerResponseH2>{dadosUsuario.nomeCliente || dadosUsuario.nomeEmpresa}</ContainerResponseH2>
           {/* Outros campos de dados do usuário */}
-        </ContainerH1>
+        </ContainerResponseH1>
       ) : (
-        <ContainerDiv>
+        <div>
           {/* Exiba uma mensagem de carregamento ou erro */}
-          <ContainerP>Carregando...</ContainerP>
-        </ContainerDiv>
+          <ContainerResponseP>Carregando...</ContainerResponseP>
+        </div>
       )}
     </Container>
   );

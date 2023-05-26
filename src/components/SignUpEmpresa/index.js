@@ -17,7 +17,7 @@ const SignUpCliente = () => {
     event.preventDefault();
 
     // Envia os dados para o servidor
-    axios.post('../BackEnd/cadastroEmpresa.php', { nomeempresa, email, senha, cnpj, endereco, telefoneempresa })
+    axios.post('../server/cadastroEmpresa.php', { nomeempresa, email, senha, cnpj, endereco, telefoneempresa })
       .then((response) => {
         // Manipula a resposta do servidor
         console.log(response.data);
@@ -36,7 +36,7 @@ const SignUpCliente = () => {
 <Container>
       <LoginBox>
         <LoginBoxH2>Cadastre-se</LoginBoxH2>
-        <LoginBoxForm onSubmit={handleSubmit}>
+        <LoginBoxForm method="POST" action="cadastroEmpresa.php" onSubmit={handleSubmit}>
           <UserBox>
             <UserBoxInput type="text" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Nome" />
             <UserBoxLabel htmlFor="email">E-mail</UserBoxLabel>

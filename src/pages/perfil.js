@@ -1,8 +1,8 @@
 import React from 'react'
+import Perfil from '../components/Perfil/perfil'
 
 
-
-const perfilPage = () => {
+const PerfilPage = () => {
   return (
     <>
     
@@ -11,4 +11,4 @@ const perfilPage = () => {
   )
 }
 
-export default perfilPage
+export default PerfilPage

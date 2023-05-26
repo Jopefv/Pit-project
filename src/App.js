@@ -5,6 +5,7 @@ import SigninPage from './pages/signin';
 import SignupPage from './pages/signup';
 import SignUpClientePage from './pages/signupcliente';
 import SignUpEmpresaPage from './pages/signupempresa';
+import PerfilPage from './pages/perfil'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/signup' component={SignupPage} exact/>
         <Route path='/signupcliente' component={SignUpClientePage} exact/>
         <Route path='/signupempresa' component={SignUpEmpresaPage} exact/>
+        <Route path='/perfil' component={PerfilPage} exact/>
       </Switch>
     </Router>
   );
