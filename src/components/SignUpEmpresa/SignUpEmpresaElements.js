@@ -12,6 +12,7 @@ export const Container = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
+  overflow-y: auto; /* Adiciona scroll vertical apenas quando necessário */
   background: linear-gradient(45deg, #ff3933 0%, #ff4838 50%,  #ff884a 100%);
 `
 
