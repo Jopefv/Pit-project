@@ -7,6 +7,7 @@ import { homeObjOne, homeObjThree, homeObjTwo } from '../components/InfoSection/
 import Services from '../components/Services/Services'
 import Footer from '../components/Footer'
 
+
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
 

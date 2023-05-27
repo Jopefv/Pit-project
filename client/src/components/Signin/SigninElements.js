@@ -48,20 +48,21 @@ export const FormContent = styled.div`
 `;
 export const Form = styled.form`
   background-color: #010101;
-  max-width: 400px;
+  max-width: 700px; /* Aumente o valor para aumentar a largura do formulário */
   height: auto;
   width: 100%;
   z-index: 1;
   display: grid;
   margin: 0 auto;
   padding: 80px 32px;
-  border-radius:4px;
-  box-shadow: 0 1px 3px rgba( 0, 0, 0, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
   
   @media screen and (max-width: 480px) {
     padding: 32px 32px;
   }
-  `
+`;
+
 export const FormH1 = styled.h1`
   margin-bottom: 40px;
   color: #fff;
@@ -105,6 +106,7 @@ export const ImgContainer = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 32px;
 `;
 
 export const Img = styled.img`
@@ -126,4 +128,33 @@ export const A = styled(Link)`
 margin: auto;
 color: #fff;
 text-decoration-line: underline;
+`;
+
+export const UserBox = styled.div`
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+`;
+
+export const UserBoxInput = styled.input`
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+`;
+
+export const UserBoxLabel = styled.label`
+  position: relative;
+  left: 0;
+  top: -60px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
 `;

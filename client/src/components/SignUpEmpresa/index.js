@@ -1,69 +1,73 @@
 import React, { useState } from 'react'
 import { LoginBox, LoginBoxH2, LoginBoxForm, UserBox, UserBoxInput, UserBoxLabel, ButtonForm, ButtonFormA, Register, A, Container } from './SignUpEmpresaElements'
-import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
+import axios from 'axios'
 
 const SignUpCliente = () => {
+  const history = useHistory()
+  const [data, setData] = useState({
+    namecom: '',
+    emailcom:'',
+    passwordcom:'',
+    cnpj:'',
+    addresscom:'', 
+    phonecom:''
+  })
  
-  const history = useHistory();
-  const [nomeempresa, setNomeempresa] = useState('');
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
-  const [cnpj, setCnpj] = useState('');
-  const [endereco, setEndereco] = useState('');
-  const [telefoneempresa, setTelefoneempresa] = useState('');
+const registerCompany = async (e) => {
+  e.preventDefault();
+  const {namecom , emailcom, passwordcom, cnpj, addresscom, phonecom} = data
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    // Envia os dados para o servidor
-    axios.post('../server/cadastroEmpresa.php', { nomeempresa, email, senha, cnpj, endereco, telefoneempresa })
-      .then((response) => {
-        // Manipula a resposta do servidor
-        console.log(response.data);
-
-        history.push('/perfil');
-        // Aqui você pode exibir uma mensagem de sucesso ou erro ao usuário
-      })
-      .catch((error) => {
-        // Manipula erros de requisição
-        console.error(error);
-      });
-  };
+  try {
+    const {data} = await axios.post('/registerCompany', {
+      namecom , emailcom, passwordcom, cnpj, addresscom, phonecom
+    })
+    if (data.error){
+      toast.error(data.error)
+    } else{
+      setData({})
+      toast.success('Login Sucessful. Welcome!')
+      history.push('/signin')
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 
   return (
 <Container>
       <LoginBox>
         <LoginBoxH2>Cadastre-se</LoginBoxH2>
-        <LoginBoxForm method="POST" action="cadastroEmpresa.php" onSubmit={handleSubmit}>
+        <LoginBoxForm  onSubmit={registerCompany}>
           <UserBox>
-            <UserBoxInput type="text" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="Nome" />
-            <UserBoxLabel htmlFor="email">E-mail</UserBoxLabel>
+            <UserBoxInput type="text" placeholder="E-mail Empresa" value={data.emailcom} onChange={(e) => setData({...data, emailcom: e.target.value})}/>
+            <UserBoxLabel htmlFor="email">E-mail Empresa</UserBoxLabel>
           </UserBox>
           <UserBox>
-            <UserBoxInput type="text" value={senha} onChange={(event) => setSenha(event.target.value)} placeholder="Nome"  />
+            <UserBoxInput type="text" placeholder="Senha"  value={data.passwordcom} onChange={(e) => setData({...data, passwordcom: e.target.value})}/>
             <UserBoxLabel htmlFor="password">Senha</UserBoxLabel>
           </UserBox>
           <UserBox>
-            <UserBoxInput type="text" value={nomeempresa} onChange={(event) => setNomeempresa(event.target.value)} placeholder="Nome"  />
-            <UserBoxLabel htmlFor="name">Nome</UserBoxLabel>
+            <UserBoxInput type="text" placeholder="Nome da Empresa" value={data.namecom} onChange={(e) => setData({...data, namecom: e.target.value})} />
+            <UserBoxLabel htmlFor="name">Nome Empresa</UserBoxLabel>
           </UserBox>
           <UserBox>
-            <UserBoxInput type="text" value={cnpj} onChange={(event) => setCnpj(event.target.value)} placeholder="Nome"  />
+            <UserBoxInput type="text" placeholder="Cnpj"  value={data.cnpj} onChange={(e) => setData({...data, cnpj: e.target.value})}/>
             <UserBoxLabel htmlFor="dob">Cnpj</UserBoxLabel>
           </UserBox>
           <UserBox>
-            <UserBoxInput type="text" value={endereco} onChange={(event) => setEndereco(event.target.value)} placeholder="Nome"  />
+            <UserBoxInput type="text" placeholder="Endereço"  value={data.addresscom} onChange={(e) => setData({...data, addresscom: e.target.value})}/>
             <UserBoxLabel htmlFor="address">Endereço</UserBoxLabel>
           </UserBox>
           <UserBox>
-            <UserBoxInput type="text" value={telefoneempresa} onChange={(event) => setTelefoneempresa(event.target.value)} placeholder="Nome"  />
-            <UserBoxLabel htmlFor="phone">Telefone</UserBoxLabel>
+            <UserBoxInput type="text" placeholder="Telefone da empresa"  value={data.phonecom} onChange={(e) => setData({...data, phonecom: e.target.value})}/>
+            <UserBoxLabel htmlFor="phone">Telefone da Empresa</UserBoxLabel>
           </UserBox>
 
           <ButtonForm>
-            <ButtonFormA id="submit" type="submit" to="/perfil">Cadastrar</ButtonFormA>
+            <ButtonFormA type="submit" to="/signin">Cadastrar</ButtonFormA>
             <Register>
               Já possui uma conta?
               <A to="/signin">Login</A>
@@ -76,3 +80,5 @@ const SignUpCliente = () => {
 }
 
 export default SignUpCliente
+
+

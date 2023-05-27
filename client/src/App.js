@@ -6,11 +6,17 @@ import SignupPage from './pages/signup';
 import SignUpClientePage from './pages/signupcliente';
 import SignUpEmpresaPage from './pages/signupempresa';
 import PerfilPage from './pages/perfil'
+import axios from 'axios';
+import { Toaster } from 'react-hot-toast'
 
+axios.defaults.baseURL = 'http://localhost:8000';
+axios.defaults.withCredentials = true
 
 function App() {
   return (
+    
     <Router>
+      <Toaster position='bottom-right' toastOptions={{duration: 2000}}/>
       <Switch>
         <Route path='/' component={Home} exact />
         <Route path='/signin' component={SigninPage} exact />

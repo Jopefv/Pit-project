@@ -17,7 +17,7 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroH1> Site dedicado a procura de Estagios</HeroH1>
-        <HeroP>Sign up for a new accoun today and recive $250 in credit towards your next payment</HeroP>
+        <HeroP>Esta a procura de um estagio ou de algum estagiario? Este é seu lugar!</HeroP>
         <HeroBtnWrapper>
           <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'               smooth={true} duration={500} spy={true} exact='true' offset={-80}>
             Comece Agora {hover ? <ArrowForward /> : <ArrowRight/>}
